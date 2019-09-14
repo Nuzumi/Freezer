@@ -47,6 +47,8 @@ namespace Fridge.View
         {
             CameraUtils.SetCameraSize(Camera);
             MainView = new MainView(Services, this);
+            
+            MainView.ShowPage(Page.Fridge);
         }
     }
 }

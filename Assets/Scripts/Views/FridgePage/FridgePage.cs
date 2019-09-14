@@ -8,6 +8,7 @@ namespace Fridge.View.FridgeView
 
     }
 
+    [Prefab("View/FridgePage/FridgePage")]
     public class FridgePage : PageElement<FridgePageComponent>, IFridgePage
     {
         public FridgePage(IServices services, IViews views, Transform parent) : base(services, views, parent) { }

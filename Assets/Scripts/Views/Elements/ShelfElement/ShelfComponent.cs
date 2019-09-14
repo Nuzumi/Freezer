@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Fridge.View.Shelf
 {
-    public class ShelfComponent : ViewReferences
+    public class ShelfComponent : MonoBehaviour
     {
         public Transform Products;
         public TextMeshProUGUI CategoryText;

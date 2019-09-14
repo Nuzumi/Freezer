@@ -23,5 +23,7 @@ namespace Fridge.View
 
         public ITouchInterceptor TouchInterceptor { get; set; }
         public IBlend Blend { get; set; }
+
+
     }
 }

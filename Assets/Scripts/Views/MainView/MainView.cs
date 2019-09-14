@@ -19,6 +19,7 @@ namespace Fridge.View
         private Dictionary<Page, IPage> Pages { get; set; }
 
         public IFridgePage FridgePage { get; private set; }
+        public IRecipePage RecipePage { get; private set; }
 
         public MainView(IServices services, IViews views) : base(services, views)
         {
@@ -29,8 +30,10 @@ namespace Fridge.View
         private void CreatePages()
         {
             FridgePage = new FridgePage(Services, Views, component.PageContent);
+            RecipePage = new RecipePage(Services, Views, component.PageContent);
 
             Pages.Add(Page.Fridge, FridgePage);
+            Pages.Add(Page.Recepies, RecipePage);
         }
 
         public void ShowPage(Page page)

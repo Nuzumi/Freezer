@@ -9,7 +9,7 @@ namespace Fridge.Services
 {
     public interface IFoodSpriteService
     {
-        Sprite GetSprite(Product product);
+        void GetSprite(Product product, Action<Sprite> onFound);
     }
 
     public class FoodSpriteService : Service, IFoodSpriteService
@@ -21,14 +21,50 @@ namespace Fridge.Services
             sprites = references.PrefabReferences.Sprites;
         }
 
-        public Sprite GetSprite(Product product)
+        public void GetSprite(Product product, Action<Sprite> onFound)
         {
-            return null;
+            FindInNames(product, onFound);
         }
 
-        private void FindInNames(string name, Action<Sprite> onFound)
+        private void FindInNames(Product product, Action<Sprite> onFound)
         {
+            for (int i = 0; i < sprites.Count; i++)
+            {
+                if(sprites[i].name == product.name)
+                {
+                    onFound(sprites[i].sprite);
+                    return;
+                }
+            }
 
+        }
+
+        private void FindInCategory(Product product, Action<Sprite> onFound)
+        {
+            for (int i = 0; i < sprites.Count; i++)
+            {
+                if(sprites[i].name == product.category)
+                {
+                    onFound(sprites[i].sprite);
+                    return;
+                }
+            }
+
+            
+        }
+
+        private void FindError(Action<Sprite> onFound)
+        {
+            for (int i = 0; i < sprites.Count; i++)
+            {
+                if (sprites[i].name == "Error")
+                {
+                    onFound(sprites[i].sprite);
+                    return;
+                }
+            }
+
+            return;
         }
     }
 

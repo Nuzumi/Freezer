@@ -24,7 +24,6 @@ namespace Fridge.View
         {
             Pages = new Dictionary<Page, IPage>();
             CreatePages();
-            go.SetActive(true);
         }
 
         private void CreatePages()
@@ -32,11 +31,11 @@ namespace Fridge.View
             FridgePage = new FridgePage(Services, Views, component.PageContent);
 
             Pages.Add(Page.Fridge, FridgePage);
-            FridgePage.Go.SetActive(true);
         }
 
         public void ShowPage(Page page)
         {
+            Show();
             active?.Hide();
 
             active = Pages[page];

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,8 +8,7 @@ namespace Fridge.View
 {
     public class ProductComponent : MonoBehaviour
     {
-        public List<Image> sprites;
-        public Image borderImage;
+        public Image image;
         public Button button;
     }
 }

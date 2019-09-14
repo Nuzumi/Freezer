@@ -16,14 +16,14 @@ namespace Fridge.View.Shelf
 
     public abstract class AbstractShelf : DestroyableElement<ShelfComponent>, IShelf
     {
-        private List<string> Products { get; set; }
+        private List<ProductObject> Products { get; set; }
         private const int MAX_COUNT = 5;
 
         private string category;
 
         public AbstractShelf(IServices services, IViews views, Transform parent) : base(services, views, parent)
         {
-            Products = new List<string>();
+            Products = new List<ProductObject>();
         }
 
         public virtual void Init(string category)
@@ -38,7 +38,10 @@ namespace Fridge.View.Shelf
 
         public void AddProduct(Product product)
         {
+            var prod = new ProductObject(Services, Views, component.Products, product);
 
+            Products.Add(prod);
+            
         }
 
         public bool HasFreeSlot()

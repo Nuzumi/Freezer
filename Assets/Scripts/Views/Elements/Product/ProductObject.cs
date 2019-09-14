@@ -8,35 +8,32 @@ namespace Fridge.View
 {
     public interface IProductObject
     {
-        void SetProduct(ProductDetail productDetail);
     }
 
+    [Prefab("Elements/Products/Product")]
     public class ProductObject : Element<ProductComponent>, IProductObject
     {
-        protected ProductObject(IServices services, IViews views, Transform parent) : base(services, views, parent)
+        readonly Product product;
+
+        public ProductObject(IServices services, IViews views, Transform parent, Product product) : base(services, views, parent)
         {
-            SetBorderActive(false);
+            this.product = product;
+            
+            AddListeners();
+        }
+        
+        private void SetSprite()
+        {
         }
 
-        public void SetBorderActive(bool active)
+        private void AddListeners()
         {
-            var color = component.borderImage.color;
-            component.borderImage.color = new Color(color.r, color.g, color.b, active ? 1 : 0);
+            component.button.onClick.AddListener(OnClick);
         }
 
-        public void SetBorderColor(Color color)
+        private void OnClick()
         {
-            component.borderImage.color = color;
-        }
-
-        public void SetProduct(ProductDetail productDetail)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void SetSprite(Sprite sprite)
-        {
-            throw new System.NotImplementedException();
+            //go to different view
         }
     }
 }

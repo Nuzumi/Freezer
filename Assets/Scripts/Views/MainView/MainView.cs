@@ -1,5 +1,5 @@
 ﻿using Fridge.Services;
-using Fridge.View.FridgeView;
+using Fridge.View.Page;
 using System.Collections.Generic;
 
 namespace Fridge.View
@@ -7,8 +7,10 @@ namespace Fridge.View
     public interface IMainView
     {
         IFridgePage FridgePage { get; }
+        IPublicFridgesPage PublicFridgesPage { get; }
+        IRecepiesPage RecepiesPage { get; }
 
-        void ShowPage(Page page);
+        void ShowPage(PageType page);
     }
 
     [Prefab("View/MainView/MainView")]
@@ -16,24 +18,38 @@ namespace Fridge.View
     {
         private IPage active;
 
-        private Dictionary<Page, IPage> Pages { get; set; }
+        private Dictionary<PageType, IPage> Pages { get; set; }
 
         public IFridgePage FridgePage { get; private set; }
+        public IPublicFridgesPage PublicFridgesPage { get; private set; }
+        public IRecepiesPage RecepiesPage { get; private set; }
 
         public MainView(IServices services, IViews views) : base(services, views)
         {
-            Pages = new Dictionary<Page, IPage>();
+            Pages = new Dictionary<PageType, IPage>();
             CreatePages();
+            AddListeners();
         }
 
         private void CreatePages()
         {
             FridgePage = new FridgePage(Services, Views, component.PageContent);
+            PublicFridgesPage = new PublicFridgesPage(Services, Views, component.PageContent);
+            RecepiesPage = new RecepiesPage(Services, Views, component.PageContent);
 
-            Pages.Add(Page.Fridge, FridgePage);
+            Pages.Add(FridgePage.Type, FridgePage);
+            Pages.Add(PublicFridgesPage.Type, PublicFridgesPage);
+            Pages.Add(RecepiesPage.Type, RecepiesPage);
         }
 
-        public void ShowPage(Page page)
+        private void AddListeners()
+        {
+            component.FridgeButton.onClick.AddListener(() => ShowPage(PageType.Fridge));
+            component.PublicFridgeButton.onClick.AddListener(() => ShowPage(PageType.PublicFridge));
+            component.RecepiesButton.onClick.AddListener(() => ShowPage(PageType.Recepies));
+        }
+
+        public void ShowPage(PageType page)
         {
             Show();
             active?.Hide();

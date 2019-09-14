@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Fridge.Controller;
+using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,8 +12,12 @@ namespace Fridge.Services
         T Deserialize<T>(string json);
     }
 
-    public class JsonService : IJsonService
+    public class JsonService : Service, IJsonService
     {
+        public JsonService(IReferences references, IServices services) : base(references, services)
+        {
+        }
+
         public T Deserialize<T>(string json)
         {
             return JsonConvert.DeserializeObject<T>(json);

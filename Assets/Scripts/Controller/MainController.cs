@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Fridge.Services;
 
 namespace Fridge.Controller
 {
@@ -6,5 +7,13 @@ namespace Fridge.Controller
     {
         public IReferences References => references;
         public References references;
+        
+        public IServices services;
+
+        private void Start()
+        {
+            services = new Services.Services();
+            services.Init(References);
+        }
     }
 }

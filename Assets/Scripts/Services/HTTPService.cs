@@ -35,13 +35,13 @@ namespace Fridge.Services
             if (!ValidateRequest(request))
                 return;
 
-            onSuccess(GetResult<T>(request));
+            //onSuccess(GetResult<T>(request));
         }
 
-        private T GetResult<T>(UnityWebRequest request)
-        {
-            return request.downloadHandler.text;
-        }
+        //private T GetResult<T>(UnityWebRequest request)
+        //{
+        //    return request.downloadHandler.text;
+        //}
 
         private bool ValidateRequest(UnityWebRequest request)
         {

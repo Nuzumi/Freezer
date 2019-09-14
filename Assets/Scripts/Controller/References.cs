@@ -6,6 +6,8 @@ namespace Fridge.Controller
     {
         Transform CanvasTransform { get; }
         Canvas Canvas { get; }
+        Camera Camera { get; }
+
         IPrefabReferences PrefabReferences { get; }
     }
 
@@ -17,6 +19,8 @@ namespace Fridge.Controller
         public Canvas Canvas => canvas;
         public Canvas canvas;
 
+        public Camera Camera => mainCamera;
+        public Camera mainCamera;
 
         public IPrefabReferences PrefabReferences => prefabReferences;
         public PrefabReferences prefabReferences;

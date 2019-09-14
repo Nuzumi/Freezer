@@ -22,7 +22,8 @@ namespace Fridge.View
 
         public MainView(IServices services, IViews views) : base(services, views)
         {
-            CreatePages();
+            go.SetActive(true);
+            //CreatePages();
         }
 
         private void CreatePages()

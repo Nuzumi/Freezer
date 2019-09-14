@@ -18,11 +18,11 @@ namespace Fridge.View
         private string mealType;
         private string mealTimeType;
 
-        public Page Type
+        public PageType Type
         {
             get
             {
-                return Page.Recepies;
+                return PageType.Recepies;
             }
         }
 

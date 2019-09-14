@@ -23,7 +23,10 @@ namespace Fridge.View.Page
         public PageType Type => PageType.Fridge;
 
         protected override void OnHidden()
-        {}
+        {
+            ShelfCreator.DestroyShelves();
+
+        }
 
         protected override void OnShow()
         {

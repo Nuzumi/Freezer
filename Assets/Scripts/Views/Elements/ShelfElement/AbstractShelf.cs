@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Fridge.View.Shelf
 {
-    public interface IShelf
+    public interface IShelf : IDestroyableElement
     {
         void Init(string category);
         void AddProduct(Product product);

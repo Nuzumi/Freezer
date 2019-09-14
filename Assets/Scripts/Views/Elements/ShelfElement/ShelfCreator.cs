@@ -8,6 +8,7 @@ namespace Fridge.View.Shelf
     public interface IShelfCreator
     {
         void FillShelves(List<Product> products);
+        void DestroyShelves();
     }
 
     public class ShelfCreator : IShelfCreator
@@ -35,6 +36,20 @@ namespace Fridge.View.Shelf
         {
             for(int i = 0; i < products.Count; i++)
                 TryAddProduct(products[i]);
+        }
+
+        public void DestroyShelves()
+        {
+            foreach(var key in Shelves?.Keys)
+                DestroyShelf(Shelves[key]);
+
+            Shelves.Clear();
+        }
+
+        private void DestroyShelf(List<IShelf> Shelf)
+        {
+            for(int i = 0; i < Shelf.Count; i++)
+                Shelf[i]?.Destroy();
         }
 
         private void TryAddProduct(Product product)

@@ -11,7 +11,7 @@ namespace Fridge.View
         void ShowPage(Page page);
     }
 
-    [Prefab("GFX/Game/View/MainView/MainView")]
+    [Prefab("View/MainView/MainView")]
     public class MainView : View<MainViewComponent>, IMainView
     {
         private IPage active;

@@ -14,16 +14,16 @@ namespace Fridge.Services
 
     public class FoodSpriteService : Service, IFoodSpriteService
     {
-        IPrefabReferences sprites;
+        List<SpriteObject> sprites;
 
         public FoodSpriteService(IReferences references, IServices services) : base(references, services)
         {
-            sprites = references.PrefabReferences;
+            sprites = references.PrefabReferences.Sprites;
         }
 
         public Sprite GetSprite(Product product)
         {
-            
+            return null;
         }
 
         private void FindInNames(string name, Action<Sprite> onFound)

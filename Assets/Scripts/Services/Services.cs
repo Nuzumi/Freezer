@@ -19,7 +19,7 @@ namespace Fridge.Services
 
         public void Init(IReferences references)
         {
-            //PrefabFactory = new PrefabFactory(this, references.PrefabReferences);
+            PrefabFactory = new PrefabFactory(this, references.PrefabReferences);
             JsonService = new JsonService(references, this);
             HTTPService = new HTTPService(references, this);
         }

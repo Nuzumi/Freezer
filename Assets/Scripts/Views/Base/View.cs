@@ -1,5 +1,4 @@
 ﻿using Fridge.Services;
-using TMPro;
 using UnityEngine;
 
 namespace Fridge.View

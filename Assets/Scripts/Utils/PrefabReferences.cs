@@ -50,7 +50,7 @@ namespace Fridge
             if(list.Count != newPaths.Length)
                 Debug.LogException(new UnityException("List: " + list.Count + "   Paths: " + paths.Length));
             else
-                Debug.Log("Validation succesed");
+                Debug.Log("Validation Successed");
             return newPaths;
         }
 

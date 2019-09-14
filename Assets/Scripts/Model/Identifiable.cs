@@ -6,7 +6,7 @@ namespace Fridge.Model
 {
     public class Identifiable
     {
-        public int id;
+        public string id;
     }
 }
 

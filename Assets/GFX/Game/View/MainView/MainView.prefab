@@ -263,7 +263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6637479446573721467}
   - component: {fileID: 7441996148553628164}
-  - component: {fileID: 3384956440254512540}
+  - component: {fileID: 676856889951505520}
   m_Layer: 0
   m_Name: MainView
   m_TagString: Untagged
@@ -304,12 +304,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0406e2de5675b7b4f80f9a330a991ff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Animator: {fileID: 3384956440254512540}
+  Animator: {fileID: 676856889951505520}
   PageContent: {fileID: 8047238840965409767}
   FridgeButton: {fileID: 187265980028007380}
   PublicFridgeButton: {fileID: 498976689844166452}
   RecepiesButton: {fileID: 7357975527849144519}
---- !u!95 &3384956440254512540
+--- !u!95 &676856889951505520
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0

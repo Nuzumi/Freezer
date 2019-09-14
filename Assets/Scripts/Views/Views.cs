@@ -13,6 +13,8 @@ namespace Fridge.View
         ITouchInterceptor TouchInterceptor { get; }
         IBlend Blend { get; }
 
+        IMainView MainView { get; }
+
         void Init();
     }
 
@@ -28,6 +30,8 @@ namespace Fridge.View
         public ITouchInterceptor TouchInterceptor { get; set; }
         public IBlend Blend { get; set; }
 
+        public IMainView MainView { get; set; }
+
         public Views(IServices services, IReferences references)
         {
             Services = services;
@@ -42,6 +46,7 @@ namespace Fridge.View
         private void CreateViews()
         {
             CameraUtils.SetCameraSize(Camera);
+            MainView = new MainView(Services, this);
         }
     }
 }

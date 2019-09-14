@@ -6,7 +6,8 @@ namespace Fridge.Model
 {
     public class Product : Identifiable
     {
-
+        public string category;
+        public string name;
     }
 }
 

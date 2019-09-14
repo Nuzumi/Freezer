@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4846bc543b88a449d7f09977df3bcc, type: 3}
   m_Name: PrefabReferences
   m_EditorClassIdentifier: 
-  prefabs: []
+  prefabs:
+  - {fileID: 3718012528206070755, guid: 43da1d2d3ea048d4ba1e42263bd82db4, type: 3}
   sprites: []
   paths: []
   spritePaths: []

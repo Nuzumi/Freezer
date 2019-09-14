@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Fridge.View.Shelf
 {
-    [Prefab("")]
+    [Prefab("Elements/ShelfElement/Shelf")]
     public class Shelf : AbstractShelf
     {
         public Shelf(IServices services, IViews views, Transform parent) : base(services, views, parent)
@@ -13,15 +13,5 @@ namespace Fridge.View.Shelf
            
         }
 
-        public override void Init(string category)
-        {
-            base.Init(category);
-            SetText(category);
-        }
-
-        private void SetText(string category)
-        {
-            component.CategoryText.text = category;
-        }
     }
 }

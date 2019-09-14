@@ -16,7 +16,7 @@ namespace Fridge.Services
         void WaistProduct(string id);
         void AddProduct(Product product);
         void GetPoints(Action<int> onSuccess);
-        void GetProducts(Action<Product[]> onSuccess);
+        void GetProducts(Action<List<Product>> onSuccess);
         void GetProduct(Action<ProductDetail> onSuccess, string id);
     }
 
@@ -66,9 +66,9 @@ namespace Fridge.Services
             GetNumber(onSuccess, "userPoints");
         }
 
-        public void GetProducts(Action<Product[]> onSuccess)
+        public void GetProducts(Action<List<Product>> onSuccess)
         {
-            Get<Product[]>(onSuccess, "products");
+            Get<List<Product>>(onSuccess, "products");
         }
 
         public void GetProduct(Action<ProductDetail> onSuccess, string id)

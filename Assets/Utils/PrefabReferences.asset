@@ -14,9 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 389619249683551025, guid: 5213f92a3be665044ba612bcfaeab7e6, type: 3}
+  - {fileID: 9084641745721757666, guid: a4d93d2420945ab43a86d5d3cde910a9, type: 3}
   - {fileID: 3718012528206070755, guid: 43da1d2d3ea048d4ba1e42263bd82db4, type: 3}
+  - {fileID: 437797513027942890, guid: c149c66ffa75a394bafd40dbccf087c8, type: 3}
   sprites: []
   paths:
   - View/FridgePage/FridgePage
+  - Elements/ShelfElement/MainShelf
   - View/MainView/MainView
+  - Elements/ShelfElement/Shelf
   spritePaths: []

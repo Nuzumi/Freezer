@@ -8,8 +8,7 @@ namespace Fridge
     {
         List<GameObject> Prefabs { get; }
         string[] Paths { get; }
-        List<Sprite> Sprites { get; }
-        string[] SpritePaths { get; }
+        List<SpriteObject> Sprites { get; }
     }
 
     [CreateAssetMenu(fileName = "PrefabReferences", menuName = "Fridge/PrefabReferences")]
@@ -17,8 +16,7 @@ namespace Fridge
     {
         public List<GameObject> Prefabs => prefabs;
         public string[] Paths => paths;
-        public List<Sprite> Sprites => sprites;
-        public string[] SpritePaths => spritePaths;
+        public List<SpriteObject> Sprites => sprites;
 
         [SerializeField]
         [Header("PREFABS")]
@@ -26,7 +24,7 @@ namespace Fridge
 
         [SerializeField]
         [Header("Sprites")]
-        public List<Sprite> sprites;
+        public List<SpriteObject> sprites;
 
         [HideInInspector]
         public string[] paths;
@@ -38,7 +36,6 @@ namespace Fridge
         public void Refresh()
         {
             paths = RefreshAndCreatePaths(prefabs);
-            spritePaths = RefreshAndCreatePaths(sprites);
         }
 
         string[] RefreshAndCreatePaths<T>(List<T> list) where T : Object
@@ -76,5 +73,12 @@ namespace Fridge
             return newPaths;
         }
 #endif
+    }
+
+    [System.Serializable]
+    public class SpriteObject
+    {
+        public Sprite sprite;
+        public string name;
     }
 }

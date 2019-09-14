@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3077063949076209767}
   - component: {fileID: 1325229364362000792}
   - component: {fileID: 948483361415493095}
+  - component: {fileID: 7108704302545262358}
   m_Layer: 0
   m_Name: FridgePage
   m_TagString: Untagged
@@ -81,6 +82,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Animator: {fileID: 1325229364362000792}
   Shelves: {fileID: 3487570804355797848}
+--- !u!223 &7108704302545262358
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389619249683551025}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 10
+  m_TargetDisplay: 0
 --- !u!1 &4199051233879305188
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,14 +220,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 0.4392157}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f92b4ba8b8bc3be42927f36276cf9a8f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4844a10a69038dc4aa01d2b6c0f89297, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

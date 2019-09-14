@@ -4,7 +4,7 @@ using Fridge.View.Shelf;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Fridge.View.FridgeView
+namespace Fridge.View.Page
 {
     public interface IFridgePage : IPage
     {
@@ -20,7 +20,7 @@ namespace Fridge.View.FridgeView
             ShelfCreator = new ShelfCreator(services, views, component.Shelves);
         }
 
-        public Page Type => Page.Fridge;
+        public PageType Type => PageType.Fridge;
 
         protected override void OnHidden()
         {}

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Fridge.View.FridgeView
+namespace Fridge.View.Page
 {
     public class FridgePageComponent : ViewReferences
     {

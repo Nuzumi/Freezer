@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace Fridge.View
 {
-    public enum Page { Fridge, PublicFridge, Recepies }
+    public enum PageType { Fridge, PublicFridge, Recepies }
 
     public interface IPage : IHideableElement
     {
-        Page Type { get; }
+        PageType Type { get; }
     }
 
     public abstract class PageElement<T> : HideableElement<T> where T : MonoBehaviour

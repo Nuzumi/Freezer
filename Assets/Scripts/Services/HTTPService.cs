@@ -20,6 +20,7 @@ namespace Fridge.Services
         void GetProduct(Action<ProductDetail> onSuccess, string id);
         void GetRecipe(Action<List<Recipe>> onSuccess);
         void GetSprite(Action<Sprite> onSuccess, string url);
+        void GetProductFromPhoto(Action<Product> onSuccess, string photo);
     }
 
     public class HTTPService: Service, IHTTPService
@@ -98,7 +99,7 @@ namespace Fridge.Services
 
         private string GetParameters(string param1, string param2)
         {
-            return apiUri + "/" + param1 + "/" + param1;
+            return apiUri + "/" + param1 + "/" + param2;
         }
 
         private string GetParameters(string[] parameters)
@@ -129,6 +130,31 @@ namespace Fridge.Services
             Sprite sprite = Sprite.Create(texture, new Rect(0.0f, 0.0f, texture.width, texture.height), new Vector2(0.5f, 0.5f), 100.0f);
             onSuccess(sprite);
         }
+
+        public void GetProductFromPhoto(Action<Product> onSuccess, string photo)
+        {
+            var image = new Image { base64Bytes = photo };
+            var imageJson = services.JsonService.Serialize(image);
+            var request = UnityWebRequest.Put(GetParameters("Products","recognizeFromPhoto"), imageJson);
+            request.method = UnityWebRequest.kHttpVerbPOST;
+            request.SetRequestHeader("Content-Type", "application/json");
+            request.SetRequestHeader("Accept", "application/json");
+            request.SendWebRequest().AsObservable().Subscribe(observer => OnGetProduct(request, onSuccess));
+        }
+
+        private void OnGetProduct(UnityWebRequest request, Action<Product> onSuccess)
+        {
+            if (request.isNetworkError || request.isHttpError)
+                return;
+
+            Product product = services.JsonService.Deserialize<Product>(request.downloadHandler.text);
+            onSuccess(product);
+        }
+    }
+
+    public class Image
+    {
+        public string base64Bytes { get; set; }
     }
 }
 

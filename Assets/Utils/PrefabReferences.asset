@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: PrefabReferences
   m_EditorClassIdentifier: 
   prefabs:
+  - {fileID: 7290889851008893351, guid: 61f20843f79c21a42a19e14f58ec4a64, type: 3}
   - {fileID: 389619249683551025, guid: 5213f92a3be665044ba612bcfaeab7e6, type: 3}
   - {fileID: 9084641745721757666, guid: a4d93d2420945ab43a86d5d3cde910a9, type: 3}
   - {fileID: 3718012528206070755, guid: 43da1d2d3ea048d4ba1e42263bd82db4, type: 3}
@@ -66,6 +67,7 @@ MonoBehaviour:
   - sprite: {fileID: 21300000, guid: 98d040cf3c2e17c4d87da5906e5e02e8, type: 3}
     name: stek
   paths:
+  - View/AddPage/AddPage
   - View/FridgePage/FridgePage
   - Elements/ShelfElement/MainShelf
   - View/MainView/MainView

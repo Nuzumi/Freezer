@@ -23,6 +23,7 @@ namespace Fridge.View
         public IFridgePage FridgePage { get; private set; }
         public IPublicFridgesPage PublicFridgesPage { get; private set; }
         public IRecipePage RecepiesPage { get; private set; }
+        public IAddPage AddPage { get; private set; }
 
         public MainView(IServices services, IViews views) : base(services, views)
         {
@@ -36,14 +37,17 @@ namespace Fridge.View
             FridgePage = new FridgePage(Services, Views, component.PageContent);
             PublicFridgesPage = new PublicFridgesPage(Services, Views, component.PageContent);
             RecepiesPage = new RecipePage(Services, Views, component.PageContent);
+            AddPage = new AddPage(Services, Views, component.PageContent);
 
             Pages.Add(FridgePage.Type, FridgePage);
             Pages.Add(PublicFridgesPage.Type, PublicFridgesPage);
             Pages.Add(RecepiesPage.Type, RecepiesPage);
+            Pages.Add(AddPage.Type, AddPage);
         }
 
         private void AddListeners()
         {
+            component.AddProduct.onClick.AddListener(() => ShowPage(PageType.AddProduct));
             component.FridgeButton.onClick.AddListener(() => ShowPage(PageType.Fridge));
             component.PublicFridgeButton.onClick.AddListener(() => ShowPage(PageType.PublicFridge));
             component.RecepiesButton.onClick.AddListener(() => ShowPage(PageType.Recepies));

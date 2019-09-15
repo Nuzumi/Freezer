@@ -8,6 +8,8 @@ namespace Fridge.View
     {
         public Transform PageContent;
 
+        public Button AddProduct;
+
         public Button FridgeButton;
         public Button PublicFridgeButton;
         public Button RecepiesButton;

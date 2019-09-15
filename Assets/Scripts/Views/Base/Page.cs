@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Fridge.View
 {
-    public enum PageType { Fridge, PublicFridge, Recepies }
+    public enum PageType { Fridge, PublicFridge, Recepies, AddProduct }
 
     public interface IPage : IHideableElement
     {

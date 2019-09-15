@@ -69,6 +69,7 @@ namespace Fridge.View
             component.vege.onClick.AddListener(() => ButtonClicked(() => mealType = "vege", component.vege));
             component.noGluten.onClick.AddListener(() => ButtonClicked(() => mealType = "noGluten", component.noGluten));
             component.meat.onClick.AddListener(() => ButtonClicked(() => mealType = "meat", component.meat));
+            component.wegetarian.onClick.AddListener(() => ButtonClicked(() => mealType = "wegetarian", component.wegetarian));
         }
 
         private void ButtonClicked(Action setValue, Button button)

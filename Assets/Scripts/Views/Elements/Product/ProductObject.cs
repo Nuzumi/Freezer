@@ -20,10 +20,12 @@ namespace Fridge.View
             this.product = product;
             
             AddListeners();
+            SetSprite();
         }
         
         private void SetSprite()
         {
+            Services.FoodSpriteService.GetSprite(product, sprite => component.image.sprite = sprite);
         }
 
         private void AddListeners()
@@ -33,6 +35,7 @@ namespace Fridge.View
 
         private void OnClick()
         {
+            component.animator.SetTrigger(AnimationHashes.Clicked);
             //go to different view
         }
     }

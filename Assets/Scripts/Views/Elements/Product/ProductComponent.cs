@@ -10,5 +10,6 @@ namespace Fridge.View
     {
         public Image image;
         public Button button;
+        public Animator animator;
     }
 }

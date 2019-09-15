@@ -23,8 +23,48 @@ MonoBehaviour:
   - {fileID: 437797513027942890, guid: c149c66ffa75a394bafd40dbccf087c8, type: 3}
   - {fileID: 1757118017453158400, guid: c746a0fe4d2a3f34b827c83ea331bd19, type: 3}
   sprites:
-  - sprite: {fileID: 0}
-    name: 
+  - sprite: {fileID: 21300000, guid: 46da2e3c6939821499ca8248073c615c, type: 3}
+    name: Error
+  - sprite: {fileID: 21300000, guid: 8b2cabfc72de297428e8e2f0b809d907, type: 3}
+    name: arbuz
+  - sprite: {fileID: 21300000, guid: 62547a69a589a374d80b837b0c44543d, type: 3}
+    name: awokado
+  - sprite: {fileID: 21300000, guid: 7731d0b7c655a9940992d8d8a7a66c0a, type: 3}
+    name: banany
+  - sprite: {fileID: 21300000, guid: fa1242c692a75714990ce9314291214f, type: 3}
+    name: bekon
+  - sprite: {fileID: 21300000, guid: 939e00bc0aa7cf348975c987ea8fbca3, type: 3}
+    name: "broku\u0142y"
+  - sprite: {fileID: 21300000, guid: c76fb0c63098570468937dd4e06a619f, type: 3}
+    name: "chi\u0144szczyzna"
+  - sprite: {fileID: 21300000, guid: 5be50ee70224526489760924424ff19b, type: 3}
+    name: ciasto
+  - sprite: {fileID: 21300000, guid: 8cca98120c72edf47b340e2503d68643, type: 3}
+    name: cytryna
+  - sprite: {fileID: 21300000, guid: 9f410b7d69c7c554ea47aca83b2bbd87, type: 3}
+    name: dynia
+  - sprite: {fileID: 21300000, guid: 8eac8c30ebcffa9428395296dfdcead0, type: 3}
+    name: "jab\u0142ka"
+  - sprite: {fileID: 21300000, guid: bcae8c9425d2c784e96cc7fe0904cb8c, type: 3}
+    name: jajka
+  - sprite: {fileID: 21300000, guid: b54aa61bb4d33d442bec539fe09d47ad, type: 3}
+    name: jogurt
+  - sprite: {fileID: 21300000, guid: eb75066e7d442c64698ab063682449ac, type: 3}
+    name: karczoch
+  - sprite: {fileID: 21300000, guid: 7a388947e245f56489fd7aef5fc15a0e, type: 3}
+    name: kurczak
+  - sprite: {fileID: 21300000, guid: c11f5a0bd3c94f84d9f3c4751232c6e0, type: 3}
+    name: marchewka
+  - sprite: {fileID: 21300000, guid: 3790d4b55560a2e4892c53d0c01ead98, type: 3}
+    name: mleko
+  - sprite: {fileID: 21300000, guid: faad0b11c54eb8c47961ac6710dc7fc0, type: 3}
+    name: papryka
+  - sprite: {fileID: 21300000, guid: db1f85b76fa23934999eba5a323c2fce, type: 3}
+    name: pomidory
+  - sprite: {fileID: 21300000, guid: 4b7cf0e3c076698428b2e4c12e807ae2, type: 3}
+    name: "ser \u017C\xF3\u0142ty"
+  - sprite: {fileID: 21300000, guid: 98d040cf3c2e17c4d87da5906e5e02e8, type: 3}
+    name: stek
   paths:
   - View/FridgePage/FridgePage
   - Elements/ShelfElement/MainShelf

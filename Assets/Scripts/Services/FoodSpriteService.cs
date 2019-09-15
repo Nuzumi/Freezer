@@ -30,17 +30,18 @@ namespace Fridge.Services
         {
             for (int i = 0; i < sprites.Count; i++)
             {
-                if(sprites[i].name == product.name)
+                if(sprites[i].name.ToLower().Contains(product.name.ToLower()))
                 {
                     onFound(sprites[i].sprite);
                     return;
                 }
             }
-
+            FindInCategory(product, onFound);
         }
 
         private void FindInCategory(Product product, Action<Sprite> onFound)
         {
+            Debug.Log(product.name);
             for (int i = 0; i < sprites.Count; i++)
             {
                 if(sprites[i].name == product.category)
@@ -50,14 +51,14 @@ namespace Fridge.Services
                 }
             }
 
-            
+            FindError(onFound);
         }
 
         private void FindError(Action<Sprite> onFound)
         {
             for (int i = 0; i < sprites.Count; i++)
             {
-                if (sprites[i].name == "Error")
+                if (sprites[i].name == "error")
                 {
                     onFound(sprites[i].sprite);
                     return;

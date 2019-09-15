@@ -12,7 +12,7 @@ namespace Fridge.View
         void Init(Recipe recipe);
     }
 
-    [Prefab("View/RecipeView/TheRecipe")]
+    [Prefab("View/RecepiesPage/TheRecipe")]
     public class TheRecipe : DestroyableElement<TheRecipeComponent>, ITheRecipe
     {
         public TheRecipe(IServices services, IViews views, Transform parent) : base(services, views, parent)

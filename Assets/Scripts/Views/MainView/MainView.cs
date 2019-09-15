@@ -47,10 +47,22 @@ namespace Fridge.View
 
         private void AddListeners()
         {
-            component.AddProduct.onClick.AddListener(() => ShowPage(PageType.AddProduct));
-            component.FridgeButton.onClick.AddListener(() => ShowPage(PageType.Fridge));
-            component.PublicFridgeButton.onClick.AddListener(() => ShowPage(PageType.PublicFridge));
-            component.RecepiesButton.onClick.AddListener(() => ShowPage(PageType.Recepies));
+            component.AddProduct.onClick.AddListener(ShowAddPage);
+            component.FridgeButton.onClick.AddListener(() => ShowAnotherPage(PageType.Fridge));
+            component.PublicFridgeButton.onClick.AddListener(() => ShowAnotherPage(PageType.PublicFridge));
+            component.RecepiesButton.onClick.AddListener(() => ShowAnotherPage(PageType.Recepies));
+        }
+
+        private void ShowAddPage()
+        {
+            ShowPage(PageType.AddProduct);
+            component.AddProduct.gameObject.SetActive(false);
+        }
+
+        private void ShowAnotherPage(PageType pageType)
+        {
+            ShowPage(pageType);
+            component.AddProduct.gameObject.SetActive(true);
         }
 
         public void ShowPage(PageType page)

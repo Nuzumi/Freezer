@@ -18,6 +18,8 @@ namespace Fridge.Services
         void GetPoints(Action<int> onSuccess);
         void GetProducts(Action<List<Product>> onSuccess);
         void GetProduct(Action<ProductDetail> onSuccess, string id);
+        void GetRecipe(Action<List<Recipe>> onSuccess);
+        void GetSprite(Action<Sprite> onSuccess, string url);
     }
 
     public class HTTPService: Service, IHTTPService
@@ -105,6 +107,27 @@ namespace Fridge.Services
             for (int i = 0; i < parameters.Length; i++)
                 result += "/" + parameters[i];
             return result;
+        }
+
+        public void GetRecipe(Action<List<Recipe>> onSuccess)
+        {
+            Get<List<Recipe>>(onSuccess, "recipes");
+        }
+
+        public void GetSprite(Action<Sprite> onSuccess, string url)
+        {
+            var request = UnityWebRequestTexture.GetTexture(url);
+            request.SendWebRequest().AsObservable().Subscribe(o => OnGetTexture(request, onSuccess));
+        }
+
+        private void OnGetTexture(UnityWebRequest request, Action<Sprite> onSuccess)
+        {
+            if (request.isNetworkError || request.isHttpError)
+                return;
+
+            Texture2D texture = ((DownloadHandlerTexture)request.downloadHandler).texture;
+            Sprite sprite = Sprite.Create(texture, new Rect(0.0f, 0.0f, texture.width, texture.height), new Vector2(0.5f, 0.5f), 100.0f);
+            onSuccess(sprite);
         }
     }
 }

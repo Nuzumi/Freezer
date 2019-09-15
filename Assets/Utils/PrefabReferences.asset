@@ -19,8 +19,12 @@ MonoBehaviour:
   - {fileID: 2597786729018280891, guid: 4d32030d3634e94468d5e8af81be66f5, type: 3}
   - {fileID: 389619249683551025, guid: 505c8a079cb24554abd46ba80ffb710f, type: 3}
   - {fileID: 389619249683551025, guid: 4269573464a96a7478eb884b1138d6d9, type: 3}
+  - {fileID: 1757118017453158400, guid: 67e9ee65fe81044488fe6bc2f0f7d6db, type: 3}
   - {fileID: 437797513027942890, guid: c149c66ffa75a394bafd40dbccf087c8, type: 3}
-  sprites: []
+  - {fileID: 1757118017453158400, guid: c746a0fe4d2a3f34b827c83ea331bd19, type: 3}
+  sprites:
+  - sprite: {fileID: 0}
+    name: 
   paths:
   - View/FridgePage/FridgePage
   - Elements/ShelfElement/MainShelf
@@ -28,5 +32,7 @@ MonoBehaviour:
   - Elements/Products/Product
   - View/PublicFridgesPage/PublicFridgesPage
   - View/RecepiesPage/RecepiesPage
+  - View/RecipeView/RecipeView
   - Elements/ShelfElement/Shelf
+  - View/RecipeView/TheRecipe
   spritePaths: []

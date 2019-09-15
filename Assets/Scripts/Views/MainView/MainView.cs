@@ -8,7 +8,7 @@ namespace Fridge.View
     {
         IFridgePage FridgePage { get; }
         IPublicFridgesPage PublicFridgesPage { get; }
-        IRecepiesPage RecepiesPage { get; }
+        IRecipePage RecepiesPage { get; }
 
         void ShowPage(PageType page);
     }
@@ -22,7 +22,7 @@ namespace Fridge.View
 
         public IFridgePage FridgePage { get; private set; }
         public IPublicFridgesPage PublicFridgesPage { get; private set; }
-        public IRecepiesPage RecepiesPage { get; private set; }
+        public IRecipePage RecepiesPage { get; private set; }
 
         public MainView(IServices services, IViews views) : base(services, views)
         {
@@ -35,7 +35,7 @@ namespace Fridge.View
         {
             FridgePage = new FridgePage(Services, Views, component.PageContent);
             PublicFridgesPage = new PublicFridgesPage(Services, Views, component.PageContent);
-            RecepiesPage = new RecepiesPage(Services, Views, component.PageContent);
+            RecepiesPage = new RecipePage(Services, Views, component.PageContent);
 
             Pages.Add(FridgePage.Type, FridgePage);
             Pages.Add(PublicFridgesPage.Type, PublicFridgesPage);

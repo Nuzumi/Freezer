@@ -7,6 +7,7 @@ namespace Fridge.View
 {
     public class RecipePageComponent : MonoBehaviour
     {
+        public Transform theRecipeParent;
         public Button chooseButton;
 
         [Header("TYPE BUTTONS")]

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Fridge.Model;
 using Fridge.Services;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,6 +18,7 @@ namespace Fridge.View
     {
         private string mealType;
         private string mealTimeType;
+        private TheRecipe theRecipe;
 
         public PageType Type
         {
@@ -32,7 +34,7 @@ namespace Fridge.View
 
         protected override void OnHidden()
         {
-            
+            GameObject.Destroy(theRecipe.go);
         }
 
         protected override void OnShow()
@@ -44,7 +46,14 @@ namespace Fridge.View
 
         private void SearchForRecipe()
         {
-            Debug.Log(mealType + " " + mealTimeType);
+            Services.HTTPService.GetRecipe(SetRecipe);
+        }
+
+        private void SetRecipe(List<Recipe> recipes)
+        {
+            Recipe randomRecipe = recipes[UnityEngine.Random.Range(0, recipes.Count)];
+            theRecipe = new TheRecipe(Services, Views, component.theRecipeParent);
+            theRecipe.Init(randomRecipe);
         }
 
         private void SetUpTimeTypeButtons()
@@ -79,7 +88,7 @@ namespace Fridge.View
                 if (cb.button == button)
                     return true;
 
-            return true;
+            return false;
         }
 
         private void ResetGroup(List<ChooseButton> list, Button button)

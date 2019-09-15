@@ -25,7 +25,6 @@ namespace Fridge.View.Page
         protected override void OnHidden()
         {
             ShelfCreator.DestroyShelves();
-
         }
 
         protected override void OnShow()

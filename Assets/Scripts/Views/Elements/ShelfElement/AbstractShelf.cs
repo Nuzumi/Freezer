@@ -51,7 +51,8 @@ namespace Fridge.View.Shelf
 
         protected override void OnDestroy()
         {
-
+            foreach (var p in Products)
+                GameObject.Destroy(p.go);
         }
     }
 }

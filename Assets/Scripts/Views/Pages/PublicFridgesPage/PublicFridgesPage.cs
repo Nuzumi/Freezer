@@ -15,13 +15,14 @@ namespace Fridge.View.Page
     public class PublicFridgesPage : PageElement<PublicFridgesPageComponent>, IPublicFridgesPage
     {
         public PublicFridgesPage(IServices services, IViews views, Transform parent) : base(services, views, parent) {
-           
+            component.MapButton.onClick.AddListener(() => Application.OpenURL("https://www.google.com/maps/d/u/0/viewer?mid=1e4QtlB9Rv4dSEOGGzz-Zgtb7KuPX75WI&hl=pl&ll=52.103701462363745%2C19.94394496315215&z=7"));
         }
 
         public PageType Type => PageType.PublicFridge;
 
         protected override void OnHidden()
-        {}
+        {
+        }
 
         protected override void OnShow()
         {

@@ -11,5 +11,9 @@ namespace Fridge.View
         public Button FridgeButton;
         public Button PublicFridgeButton;
         public Button RecepiesButton;
+
+        public Animator FridgeButtonAnim;
+        public Animator PublicFridgeButtonAnim;
+        public Animator RecepiesButtonAnim;
     }
 }

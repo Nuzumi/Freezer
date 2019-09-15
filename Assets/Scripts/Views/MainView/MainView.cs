@@ -51,11 +51,23 @@ namespace Fridge.View
 
         public void ShowPage(PageType page)
         {
+            if(page == active?.Type)
+                return;
+
             Show();
             active?.Hide();
 
             active = Pages[page];
             active.Show();
+            AnimateButtons(page);
+        }
+
+
+        private void AnimateButtons(PageType page)
+        {
+            component.FridgeButtonAnim.SetBool(AnimationHashes.Pressed, page == PageType.Fridge);
+            component.PublicFridgeButtonAnim.SetBool(AnimationHashes.Pressed, page == PageType.PublicFridge);
+            component.RecepiesButtonAnim.SetBool(AnimationHashes.Pressed, page == PageType.Recepies);
         }
 
         protected override void OnShow()

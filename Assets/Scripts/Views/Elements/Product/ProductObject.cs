@@ -33,6 +33,7 @@ namespace Fridge.View
 
         private void OnClick()
         {
+            component.animator.SetTrigger(AnimationHashes.Clicked);
             //go to different view
         }
     }

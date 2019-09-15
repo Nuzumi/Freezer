@@ -14,6 +14,7 @@ namespace Fridge.View
         public Button vege;
         public Button meat;
         public Button noGluten;
+        public Button wegetarian;
 
         [Header("MEAL")]
         public Button breakfast;

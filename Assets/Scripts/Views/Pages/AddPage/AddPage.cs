@@ -42,6 +42,13 @@ namespace Fridge.View
         private void AddProduct(Product product)
         {
             Debug.Log(product.name);
+            Views.MainView.ShowPage(PageType.Fridge);
+            Services.HTTPService.GetProduct(ShowPopup, product.id);
+        }
+
+        private void ShowPopup(ProductDetail details)
+        {
+            Views.Popups.ProductDetailsPopup.Show(details);
         }
 
         public PageType Type

@@ -36,7 +36,12 @@ namespace Fridge.View
         private void OnClick()
         {
             component.animator.SetTrigger(AnimationHashes.Clicked);
-            //go to different view
+            Services.HTTPService.GetProduct(ShowPopup, product.id);
+        }
+
+        private void ShowPopup(ProductDetail detail)
+        {
+            Views.Popups.ProductDetailsPopup.Show(detail);
         }
     }
 }

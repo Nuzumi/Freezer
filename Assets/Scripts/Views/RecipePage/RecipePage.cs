@@ -34,7 +34,7 @@ namespace Fridge.View
 
         protected override void OnHidden()
         {
-            GameObject.Destroy(theRecipe.go);
+            theRecipe?.Destroy();
         }
 
         protected override void OnShow()

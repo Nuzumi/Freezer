@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 4430219833329376676}
   - component: {fileID: 6827095283422897052}
   - component: {fileID: 8021684015432398709}
-  m_Layer: 0
+  - component: {fileID: 3326928244190697404}
+  m_Layer: 5
   m_Name: TouchInterceptor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +70,7 @@ Canvas:
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
-  m_OverrideSorting: 0
+  m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
@@ -96,6 +97,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4516825237954986916}
   m_CullTransparentMesh: 0
+--- !u!114 &3326928244190697404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4516825237954986916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &6941994985788295861
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,7 +126,7 @@ GameObject:
   - component: {fileID: 3406227459254685548}
   - component: {fileID: 1994690728322275664}
   - component: {fileID: 4511431935835900771}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +196,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 4511431935835900771}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []

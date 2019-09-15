@@ -14,15 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 7290889851008893351, guid: 61f20843f79c21a42a19e14f58ec4a64, type: 3}
+  - {fileID: 7769654407756764145, guid: 9e269591c11a050448f812b4ab29b5d6, type: 3}
   - {fileID: 389619249683551025, guid: 5213f92a3be665044ba612bcfaeab7e6, type: 3}
   - {fileID: 9084641745721757666, guid: a4d93d2420945ab43a86d5d3cde910a9, type: 3}
   - {fileID: 3718012528206070755, guid: 43da1d2d3ea048d4ba1e42263bd82db4, type: 3}
   - {fileID: 2597786729018280891, guid: 4d32030d3634e94468d5e8af81be66f5, type: 3}
+  - {fileID: 6649268162013492629, guid: 9a32f54f4cfd6ef49bcc715567f7977d, type: 3}
+  - {fileID: 389619249683551025, guid: 505c8a079cb24554abd46ba80ffb710f, type: 3}
   - {fileID: 389619249683551025, guid: 505c8a079cb24554abd46ba80ffb710f, type: 3}
   - {fileID: 389619249683551025, guid: 4269573464a96a7478eb884b1138d6d9, type: 3}
   - {fileID: 1757118017453158400, guid: 67e9ee65fe81044488fe6bc2f0f7d6db, type: 3}
   - {fileID: 437797513027942890, guid: c149c66ffa75a394bafd40dbccf087c8, type: 3}
-  - {fileID: 1757118017453158400, guid: c746a0fe4d2a3f34b827c83ea331bd19, type: 3}
+  - {fileID: 6611662098851976961, guid: 846be6def927dc843b72ccc16971163a, type: 3}
+  - {fileID: 4516825237954986916, guid: ce7073713723934439df5de208b211e9, type: 3}
   sprites:
   - sprite: {fileID: 21300000, guid: 46da2e3c6939821499ca8248073c615c, type: 3}
     name: Error
@@ -68,13 +72,17 @@ MonoBehaviour:
     name: stek
   paths:
   - View/AddPage/AddPage
+  - Popup/Blend/Blend
   - View/FridgePage/FridgePage
   - Elements/ShelfElement/MainShelf
   - View/MainView/MainView
   - Elements/Products/Product
+  - Popup/ProductDetailsPopup/ProductDetailsPopup
+  - View/PublicFridgesPage/PublicFridgesPage
   - View/PublicFridgesPage/PublicFridgesPage
   - View/RecepiesPage/RecepiesPage
   - View/RecipeView/RecipeView
   - Elements/ShelfElement/Shelf
-  - View/RecipeView/TheRecipe
+  - View/RecepiesPage/TheRecipe
+  - View/Touch/TouchInterceptor
   spritePaths: []

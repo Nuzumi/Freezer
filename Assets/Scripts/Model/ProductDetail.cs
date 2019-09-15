@@ -7,8 +7,9 @@ namespace Fridge.Model
 {
     public class ProductDetail : Product
     {
-        public DateTime buyDate;
-        public int remainingAmount;
+        public DateTime buyDate; 
+        public DateTime expiryDate;
+        public double remainingAmount;
         public string unit;
     }
 }

@@ -14,6 +14,11 @@ namespace Fridge.View
         IBlend Blend { get; }
 
         IMainView MainView { get; }
+        IPopups Popups
+        {
+            get;
+        }
+
 
         void Init();
     }
@@ -32,6 +37,8 @@ namespace Fridge.View
 
         public IMainView MainView { get; set; }
 
+        public IPopups Popups { get; set; }
+
         public Views(IServices services, IReferences references)
         {
             Services = services;
@@ -41,6 +48,10 @@ namespace Fridge.View
         public void Init()
         {
             CreateViews();
+
+            Popups = new Popups(Services, this);
+            TouchInterceptor = new TouchInterceptor(Services, this, CanvasTransform);
+            Blend = new Blend(Services, this);
         }
 
         private void CreateViews()

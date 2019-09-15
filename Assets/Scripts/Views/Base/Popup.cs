@@ -14,7 +14,6 @@ namespace Fridge.View
 
         protected override void OnShow()
         {
-            Views.TouchInterceptor.Setup(10, "UI", 0.4f);
             Views.TouchInterceptor.Show();
             Views.TouchInterceptor.OnTouchIntercepted += Hide;
             Views.Blend.Show();

@@ -13,7 +13,7 @@ namespace Fridge.View
     }
 
     [Prefab("View/RecipeView/TheRecipe")]
-    public class TheRecipe : Element<TheRecipeComponent>, ITheRecipe
+    public class TheRecipe : DestroyableElement<TheRecipeComponent>, ITheRecipe
     {
         public TheRecipe(IServices services, IViews views, Transform parent) : base(services, views, parent)
         {
@@ -50,6 +50,11 @@ namespace Fridge.View
         private void SetSprite(Sprite sprite)
         {
             component.image.sprite = sprite;
+        }
+
+        protected override void OnDestroy()
+        {
+           
         }
     }
 }

@@ -20,11 +20,13 @@ namespace Fridge.View
         public TouchInterceptor(IServices services, IViews views, Transform parent) : base(services, views, parent)
         {
             component.Button.onClick.AddListener(OnClick);
+            go.SetActive(false);
         }
 
         void OnClick()
         {
             OnTouchIntercepted?.Invoke();
+            Hide();
         }
 
         public void Setup(int sortOrder, string sortLayer = "UI", float alpha = 0f)

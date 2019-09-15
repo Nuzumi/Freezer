@@ -63,7 +63,7 @@ namespace Fridge.View
 
             active = Pages[page];
             active.Show();
-            //AnimateButtons(page);
+            AnimateButtons(page);
         }
 
 

@@ -22,13 +22,14 @@ namespace Fridge.Controller
         private void CreateServices()
         {
             services = new Services.Services();
-            services.Init(References);
+            services.Init(References, views);
         }
 
         private void CreateViews()
         {
             views = new Views(services, references);
             views.Init();
+            
         }
     }
 }
